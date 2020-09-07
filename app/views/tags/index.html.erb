@@ -1,0 +1,20 @@
+<div class="alert alert-light" role="alert">
+  <%= notice %>
+</div>
+
+<%= link_to 'タグ作成', new_tag_path,class:"btn btn-danger text-white mt-4" %>
+<div class="contents d-flex flex-row flex-wrap w-">
+  <% @tags.each do |tag| %>
+    <div class="card mt-5 w-25 ml-5">
+      <div class="card-body">
+        <h3><span class="badge badge-pill badge-light"><%= tag.kind %></span></h3>
+        <p class="h5 mt-2"></p>
+        <div class="float-right">
+          <%= link_to tag do %>
+            <button type="submit" class="btn btn-info">詳細</button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,22 @@
+<div class="well well-lg">
+  <h2 class="mt-4 mb-4">詳細ページ</h4>
+  <div class="card">
+    <div class="card-body">
+      <p id="notice"><%= notice %></p>
+      <p class="h6 mb-4">
+        <strong>種類:</strong>
+        <%= @tag.kind %>
+      </p>
+    </div>
+  </div>
+    <div class="button">
+      <div class="float-right mt-1">
+        <%= link_to edit_tag_path(@tag) do %>
+          <button type="submit" class="btn btn-info">編集</button>
+        <% end %>
+        <%= link_to @tag, method: :delete do %>
+          <button type="submit" class="btn btn-info">削除</button>
+        <% end %>
+      </div>
+    </div>
+</div>
